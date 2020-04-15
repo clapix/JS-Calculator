@@ -52,16 +52,18 @@ h4 {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, 50px);
+  /* to fit large numbers: */
   grid-template-rows: minmax(120px, auto) repeat(5, 50px);
   grid-gap: 7px;
 }
 
+/* to take the space of two buttons: */
 .span-two {
   grid-column: span 2;
 }
 
 .output {
-  /* stretching the output item*/
+  /* stretching the output item: */
   grid-column: 1 / -1;
   display: flex;
   align-items: flex-end;
@@ -81,6 +83,7 @@ h4 {
   vertical-align: middle;
   text-align: center;
   font-size: 25px;
+  outline: none;
   cursor: pointer;
 }
 
@@ -113,11 +116,11 @@ button:hover {
   background-color: #7f47dd;
 }
 
-.output-current {
+.currently-typing {
   font-size: 2.5rem;
   color: white;
 }
 
-.output-previous {
+.previously-typed {
   font-size: 1.5rem;
 }

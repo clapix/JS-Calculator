@@ -5,33 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="calculator.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <h4>My Calculator</h4>
       <section class="grid-container">
         <div class="output">
-          <div class="output-previous">= 2 *</div>
-          <div class="output-current">18</div>
+          <div data-previously-typed class="previously-typed">= 2 *</div>
+          <div data-currently-typing class="currently-typing">18</div>
         </div>
-        <button class="clear span-two">C</button>
-        <button class="cancel operator">del</button>
-        <button class="div operator">÷</button>
-        <button class="one num">1</button>
-        <button class="two num">2</button>
-        <button class="three num">3</button>
-        <button class="times operator">*</button>
-        <button class="four num">4</button>
-        <button class="five num">5</button>
-        <button class="six num">6</button>
-        <button class="minus operator">-</button>
-        <button class="seven num">7</button>
-        <button class="eight num">8</button>
-        <button class="nine num">9</button>
-        <button class="plus operator">+</button>
-        <button class="point num">.</button>
-        <button class="zero num">0</button>
-        <button class="equal span-two">=</button>
+        <button data-clear class="clear span-two">C</button>
+        <button data-delete class="operator">del</button>
+        <button data-operation class="operator">÷</button>
+        <button cdata-num lass="num">1</button>
+        <button data-num class="num">2</button>
+        <button data-num class="num">3</button>
+        <button data-operation class="operator">*</button>
+        <button data-num class="num">4</button>
+        <button data-num class="num">5</button>
+        <button data-num class="num">6</button>
+        <button data-operation class="operator">-</button>
+        <button data-num class="num">7</button>
+        <button data-num class="num">8</button>
+        <button data-num class="num">9</button>
+        <button data-operation class="operator">+</button>
+        <button data-num class="num">.</button>
+        <button data-num class="num">0</button>
+        <button data-equals class="equal span-two">=</button>
       </section>
     </div>
   </body>
