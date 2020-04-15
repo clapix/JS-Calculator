@@ -1,7 +1,33 @@
 class Calculator {
-  constructor(previousTypedText, currentTypedText) {
-    this.previousTypedText = previousTypedText
-    this.currentTypedText = currentTypedText
+  constructor(previousOperand, currentOperand) {
+    this.previousOperand = previousOperand
+    this.currentOperand = currentOperand
+    this.clear()
+  }
+  clear() {
+    this.currentOperand = ""
+    this.previousOperand = ""
+    this.operation = undefined
+  }
+
+  delete() {
+
+  }
+
+  appendNum(num) {
+
+  }
+
+  chooseOperation(operation) {
+
+  }
+
+  compute() {
+
+  }
+
+  updateDisplay() {
+
   }
 
 }
@@ -12,5 +38,5 @@ const operatorBtn = document.querySelectorAll("[data-operation]")
 const equalsBtn = document.querySelector("[data-equals]")
 const clearsBtn = document.querySelector("[data-clear]")
 const deleteBtn = document.querySelector("[data-delete]")
-const previousTypedText = document.querySelector("[data-previously-typed]")
-const currentTypedText = document.querySelector("[data-currently-typing]")
+const previousOperand = document.querySelector("[data-previous-operand]")
+const currentOperand = document.querySelector("[data-current-operand]")
