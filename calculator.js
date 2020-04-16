@@ -15,7 +15,8 @@ class Calculator {
   }
 
   appendNum(num) {
-    this.currentOperand = num
+    if (num === "." & this.currentOperand.includes(".")) return
+    this.currentOperand = this.currentOperand.toString() + num.toString()
   }
 
   chooseOperation(operation) {
@@ -34,7 +35,7 @@ class Calculator {
 
 
 const numberBtns = document.querySelectorAll("[data-num]")
-const operatorBtns = document.querySelectorAll("[data-operation]")
+const operationBtns = document.querySelectorAll("[data-operation]")
 const equalsBtn = document.querySelector("[data-equals]")
 const clearsBtn = document.querySelector("[data-clear]")
 const deleteBtn = document.querySelector("[data-delete]")
@@ -48,5 +49,11 @@ numberBtns.forEach(button => {
     calculator.appendNum(button.innerText)
     calculator.updateDisplay()
   })
+})
 
-});
+operationBtns.forEach(button => {
+  button.addEventListener("click", () => {
+    calculator.appendNum(button.innerText)
+    calculator.updateDisplay()
+  })
+})
