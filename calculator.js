@@ -11,7 +11,7 @@ class Calculator {
   }
 
   delete() {
-
+    this.currentOperand = this.currentOperand.toString().slice(0, -1)
   }
 
   appendNum(num) {
@@ -88,5 +88,15 @@ operationBtns.forEach(button => {
 
 equalsBtn.addEventListener("click", button => {
   calculator.compute()
+  calculator.updateDisplay()
+})
+
+clearsBtn.addEventListener("click", button => {
+  calculator.clear()
+  calculator.updateDisplay()
+})
+
+deleteBtn.addEventListener("click", button => {
+  calculator.delete()
   calculator.updateDisplay()
 })
